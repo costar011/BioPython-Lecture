@@ -30,3 +30,12 @@ a.find("b")
 # join() - 문자 사이에 지정한 문자 삽입
 a = "happy"
 ",".join(a)
+
+# lstrip() - 왼쪽 공백 지우기
+# rstrip() - 오른쪽 공백 지우기
+# strip() - 양쪽 공백 지우기
+
+a = " Happy "
+print(a.lstrip())
+print(a.rstrip())
+print(a.strip())
