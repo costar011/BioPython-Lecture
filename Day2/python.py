@@ -188,3 +188,78 @@ print(type(t1))
 print(type(t2))
 
 print("==========================")
+
+# 집합(set) 자료형 - = 중복을 허용하지 않고 순서가 없는 배열
+# 순서가 없으므로 인덱싱을 사용해서 접근할 수 없음
+# 중복 허용하지 않음, 튜플과 다르게 값을 추가 / 삭제 / 갱신 할 수 있음
+# 집합 연산자를 지원함 ( union, intersection, minus 등)
+# 순서가 없으므로 인덱싱을 사용해서 접근 할 수 없음
+
+s1 = set([1,2,3])
+print(type(s1))
+print(s1)
+
+print("==========================")
+
+s2 = ([1,2,3])
+print(type(s2))
+print(s2)
+print("==========================")
+
+# 교집합 intersection() 함수
+# 두 집합 양쪽에 모두 포함된 값만 추출하는 연산
+
+s1 = set([1,2,3,4,5,6])
+s2 = set([4,5,6,7,8,9])
+print(s1.intersection(s2))
+print(s1 & s2)
+print(s1)
+print(s2)
+
+print("==========================")
+
+# 딕셔너리 자료형 - key-value 자료형
+# 순차적으로 값을 구하지 않고 key로 value를 리턴함
+# 딕셔너리변수명 = {key1:value1, key2:value2, key3:value3}
+
+dic1 = {}
+dic2 = dict()
+print(type(dic1))
+print(type(dic2))
+
+print("==========================")
+
+# 딕셔너리 자체 함수
+# keys() 함수 - Key만 모아서 dict_keys 객체 리턴
+# values() 함수 - Value만 모아서 dict_values 객체 리턴
+# items() 함수 - key와 value 쌍을 묶은 값을 dict_items 객체 리턴
+# clear() 함수 - key-value 모두 지움 get(x) 함수 - X 라는 key에 대응되는 value 리턴
+a = {"name":"costar", "year":2025, "student_number":"25510001"}
+print(a.keys())
+print(a.values())
+print(a.items())
+print(a.get("name"))
+
+print("==========================")
+
+# 조건부 표현식
+score = 99
+if score >= 60:
+  message = "success"
+else:
+  message = "fail"
+print(message)
+
+print("==========================")
+
+score = 99
+message = "success" if score >= 60 else "fail"
+print(message)
+
+print("==========================")
+
+num = 99
+rs = "짝수" if num % 2 == 0 else "홀수"
+print(rs)
+
+print("==========================")
