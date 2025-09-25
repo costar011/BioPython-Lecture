@@ -263,3 +263,49 @@ rs = "짝수" if num % 2 == 0 else "홀수"
 print(rs)
 
 print("==========================")
+
+
+# while 문 - 주어진 조건이 true 인 경우 명령 문장을 수행하고 false인 경우 반복 중단
+# continue문은 남은 명령 문장을 건너 뛰고 다시 조건문으로 돌아감
+# brak 문은 반복문 강제 종류
+score = 95
+while score < 100:
+  score += 1
+  if score == 97:
+    break
+  print(score)
+
+# for문 사용
+# 리스트 탐색 하면서 변수 언패킹 하는 경우
+
+test = [[1,2],[3,4],[5,6]]
+for(left, right) in test:
+  print(left, right)
+
+
+# 패킹과 언패킹
+# 변수 만드는 방법은 여러가지이며 패킹과 언패킹 구분이 가능함
+
+a,b = ("python", "hi")
+print(a,b)
+(a,b) = "python", "hi"
+print(a,b)
+
+print("==========================")
+
+test = (1,2,3,4)
+print(test)
+a,b,c,d = test
+print(a,b,c,d)
+
+# range() 함수 - 리스트 만들어주는 함수
+# range(시작 숫자, 종료 숫자) 함수와 for문을 같이 사용함
+test = range(2,10)
+print(test)
+print(type(test))
+
+# 구구단
+for i in range(2,10):
+  print(f"{i}단")
+  for j in range(1,10):
+    print(f"{i} * {j} = {i * j}")
