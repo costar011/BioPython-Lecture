@@ -83,3 +83,44 @@ class Calculator:
   print(cal.get_result()) # 10 + 20 = 8
   print(cal.operator)
   print("===========")
+
+  # 클래스 상속해서 계산기 확장
+class MoreCalculator(Calculator):
+  def __init__(self, first, second):
+    super().__init__(first, second)
+
+  def pow(self):
+    self.operator = "**"
+    self.result = self.first ** self.second
+    return self.result
+
+  def div(self):
+    self.operator = "/"
+    self.result = 0 if self.second == 0 else self.first / self.second
+    return self.result
+
+  cal = MoreCalculator(5,3)
+  print(cal.pow())
+  print(cal.get_result())
+  cal.add()
+  print(cal.get_result())
+
+
+# 다형성 - 같은 이름의 메소드가 다른 기능을 하는 것
+class animal:
+  def __init__(self, name):
+    self.name = name
+  def talk(self):
+    raise NotImplementedError("subclass must implement abstract method")
+
+class cat(animal):
+  def talk(self):
+    return "meow"
+
+class dog(animal):
+  def talk(self):
+    return "woof"
+
+  animals = [cat("야옹이"), dog("멍멍이")]
+  for animal in animals:
+    print(animal.name + ": " + animal.talk())
