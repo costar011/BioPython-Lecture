@@ -6,3 +6,7 @@ def solution1(a, b):
 # 두 수의 연산값 비교하기
 def solution2(a, b):
  return max(int(str(a) + str(b)), 2 * a * b)
+
+ #flag에 따라 다른 값 반환하기
+def solution3(a, b, flag):
+   return  a + b if flag else a - b
