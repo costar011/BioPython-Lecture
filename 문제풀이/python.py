@@ -37,4 +37,35 @@ def solution5(arr, queries):
 
 ######################
 
-# 배열 만들기4
+# 배열 만들기 4
+def solution6(arr):
+    stk = []
+    i = 0
+    while i < len(arr):
+        if not stk or stk[-1] < arr[i]:
+            stk.append(arr[i])
+            i += 1
+        else:
+            stk.pop()
+    return stk
+
+# 주사위게임 문제
+def solution(a, b, c, d):
+    nums = [a, b, c, d]
+    nums.sort() # 오름차순
+
+    if nums[0] == nums[3]:
+        return 1111 * nums[0]
+    if nums[0] == nums[2] or nums[1] == nums[3]:
+        p = nums[1]
+        q = nums[0] if nums[1] != nums[0] else nums[3]
+        return (10 * p + q) ** 2
+    if nums[0] == nums[1] and nums[2] == nums[3]:
+        return (nums[0] + nums[2]) * abs(nums[0] - nums[2])
+    if nums[0] == nums[1]:
+        return nums[2] * nums[3]
+    if nums[1] == nums[2]:
+        return nums[0] * nums[3]
+    if nums[2] == nums[3]:
+        return nums[0] * nums[1]
+    return nums[0]
