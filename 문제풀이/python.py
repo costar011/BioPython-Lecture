@@ -49,6 +49,8 @@ def solution6(arr):
             stk.pop()
     return stk
 
+######################
+
 # 주사위게임 문제
 def solution(a, b, c, d):
     nums = [a, b, c, d]
@@ -69,3 +71,12 @@ def solution(a, b, c, d):
     if nums[2] == nums[3]:
         return nums[0] * nums[1]
     return nums[0]
+
+######################
+
+# 문자열 여러번 뒤집기
+def solution8(my_string, queries):
+    arr = list(my_string)
+    for s, e in queries:
+        arr[s:e+1] = arr[s:e+1][::-1]  # 슬라이스해서 뒤집기
+    return ''.join(arr)
