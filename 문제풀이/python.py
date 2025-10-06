@@ -27,6 +27,16 @@ def solution4(a, d, included):
    answer += (a + i * d) * included[i]
    return answer
 
+# 방법 1
+# for i in range(len(included)):
+#   if included[i] == True:
+#     answer += a
+#   a += d
+# return answer
+
+# 방법 2
+# return sum(a + i * d for i, is_included in enumerate(included) if is_included)
+
 ######################
 
 # 수열
