@@ -42,3 +42,42 @@ print(person.age) # 20
 # person.age = -1 # 이 줄의 주석을 해제하면 ValueError가 발생합니다.
 person.age = person.age - 1
 print(person.age) # 19
+
+# 접근제어자 : 변수 선언 방식으로 구분
+# _Protected variable : 자기 클래스 내부 혹은 상속받은 자식 클래스에서만 접근 허용
+# __Private variable : 자기 클래스 내부의 메서드에서만 접근 허용
+
+# 클래스 : 객체를 만들 수 있는 틀
+# 객체: 속성과 메소드 갖는 것
+
+class Calculator:
+  def __init__(self, first, second):
+    self.first = first
+    self.second = second
+  def add(self):
+    return selef.first + self.second
+#객체#
+my_calculator = Calculator(5,3) #인스턴스#
+
+# 인스턴스 이름(변수 이름) = 클래스 이름()
+# 클래스 이름 = 생성자 <- 클래스 이름과 같은 함수가 생성자 라고한다
+
+# 객체와 인스턴스 차이
+# my_calculator = Calculator 에서 , my_calculator는 객체 | Calculator는 인스턴스
+
+# class 기반으로 만들어진 객체가 인스턴스임
+
+
+# 예외
+# 예상치 못한 상황이 발생하는 것
+# 예측 불가능한 예외 , 예측 가능한 예외
+
+# 조건문으로 사전에 방지
+user_input = input("원 반지름을 정수 입력 : ")
+
+if user_input.isdigit():
+  number_input = int(user_input)
+  print("원의 원지름: ", number_input)
+  print("넓이:",(number_input ** 2)* 3.14)
+else:
+  print("정수를 입력하지 않았습니다")
