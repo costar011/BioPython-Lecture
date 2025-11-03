@@ -71,4 +71,25 @@ df = pd.DataFrame(data)
 # Data Frame을 사용하면 가독성이 좋은 행과 열의 구조를 가진 데이터로 변형
 df
 
-##########################
+#########################
+
+#딕셔너리는 {key:value}의 형태로 이루어져있고,
+data = {'Name': ['John', 'Anna', 'Peter', 'Linda'],'Age': [28, 34, 29, 32],'City': ['New York', 'Paris', 'Berlin', 'London']}
+df = pd.DataFrame(data)
+
+#########################
+
+df1 = DataFrame([[1,3,5],[7,9,11],[5,13,15]])
+df1
+
+df2 = DataFrame([[1,2,3],[4,np.nan,6],[7,8,9]], columns=[0,1,3], index=[0,1,3])
+df2
+
+df1 + df2
+
+
+#########################
+
+df1.add(df2,fill_value=0)
+
+#########################
