@@ -10,3 +10,6 @@ def solution(rny_string):
 
 def solution(myString, pat):
     return int(pat.lower() in myString.lower())
+
+def solution(names):
+    return [names[i] for i in range(0, len(names), 5)]
